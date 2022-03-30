@@ -13,31 +13,25 @@
 
 <body>
     <div id="app">
-        <el-button>{{ message }}</el-button>
-        <el-row :gutter="12">
-            <el-col :span="8">
-                <el-card shadow="always"> Always </el-card>
-            </el-col>
-            <el-col :span="8">
-                <el-card shadow="hover"> Hover </el-card>
-            </el-col>
-            <el-col :span="8">
-                <el-card shadow="never"> Never </el-card>
-            </el-col>
-        </el-row>
+        <vue-card-stack :cards="cards" :stack-width="360" :card-width="280">
+            <template v-slot:card="{ card }">
+                <div style="width: 100%; height: 100%;" :style="{ background: card.background }"></div>
+            </template>
+
+            <template v-slot:nav="{ activeCardIndex, onNext, onPrevious }">
+                <nav class="nav">
+                    <div class="counter">{{activeCardIndex + 1}}/{{cards.length}}</div>
+                    <button v-on:click="onPrevious" class="button">
+                        <span class="chevron left"></span>
+                    </button>
+                    <button v-on:click="onNext" class="button">
+                        <span class="chevron right"></span>
+                    </button>
+                </nav>
+            </template>
+        </vue-card-stack>
     </div>
-    <script>
-        const App = {
-            data() {
-                return {
-                    message: "Hello Element Plus",
-                };
-            },
-        };
-        const app = Vue.createApp(App);
-        app.use(ElementPlus);
-        app.mount("#app");
-    </script>
+    <script src="./src/js/element.js"></script>
 </body>
 
 </html>
