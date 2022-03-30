@@ -1,4 +1,3 @@
-import Vue from "vue";
 import VueCardStack from "vue-card-stack";
 
 export default {
