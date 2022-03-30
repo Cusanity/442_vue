@@ -1,4 +1,4 @@
-import VueCardStack from "vue-card-stack";
+import VueCardStack from "";
 
 export default {
     components: {
