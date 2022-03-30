@@ -5,7 +5,8 @@ const app = Vue.createApp({
         return {
             showBooks: true,
             title: 'The Final Empire',
-            age: 20
+            age: 20,
+            data: getJsonCardsArray()
         }
     },
     methods: {
