@@ -18,7 +18,7 @@
         <button @click="toggleHide()">Toggle</button>
         <h2 v-show="showBooks">Showing Cards</h2>
         <li v-for="card in cards">
-            <h2 v-bind:href="card.cardID"></h2>
+            <h2 v-bind:href="card.cardID">{{card.cardID}}</h2>
             <h3>name: {{ card.name }}</h3>
             <h4>description: {{ card.description }}</h4>
             <h5>extra_notes: {{ card.extra_notes }}</h5>
