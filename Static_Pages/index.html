@@ -16,7 +16,10 @@
         <button @click="changeTitle()">Change title</button>
         <button @click="changeTitle()">Change title</button>
         <button @click="toggleHide()">Toggle</button>
-        <h2 v-show="showBooks">Showing Books</h2>
+        <h2 v-show="showBooks">Showing Cards</h2>
+        <li v-for="card in cards">
+            <h3>{{ card }}</h3>
+        </li>
     </div>
     <script src="./src/js/jquery-3.6.0.js"></script>
     <script type="module" src="./src/js/session.js"></script>
