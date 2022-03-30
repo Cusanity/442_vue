@@ -18,11 +18,11 @@
         <button @click="toggleHide()">Toggle</button>
         <h2 v-show="showBooks">Showing Cards</h2>
         <li v-for="card in cards">
-            <h3>{{ card.name }}</h3>
-            <h4>{{ card.description }}</h4>
-            <h5>{{ card.extra_notes }}</h5>
-            <h6>{{ card.email }}</h6>
-            <h6>{{ card.cardID }}</h6>
+            <h3>name: {{ card.name }}</h3>
+            <h4>description: {{ card.description }}</h4>
+            <h5>extra_notes: {{ card.extra_notes }}</h5>
+            <h6>email: {{ card.email }}</h6>
+            <h6>cardID: {{ card.cardID }}</h6>
         </li>
     </div>
     <script src="./src/js/jquery-3.6.0.js"></script>
