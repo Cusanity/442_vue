@@ -1,22 +1,34 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <HelloWorld msg="NohTyp"/>
     <SchoolCompo/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-import SchoolCompo from './components/SchoolCompo.vue'
+  import HelloWorld from './components/HelloWorld.vue'
+  import SchoolCompo from './components/SchoolCompo.vue'
+  
+  export default {
+    name: 'App',
+    components: {
+      HelloWorld,
+      SchoolCompo
+    },
+    data: () => ({
+      loading: false,
+      selection: 1,
+    }),
 
-export default {
-  name: 'App',
-  components: {
-    HelloWorld,
-    SchoolCompo
-}
-}
+    methods: {
+      reserve () {
+        this.loading = true
+
+        setTimeout(() => (this.loading = false), 2000)
+      },
+    },
+  }
 </script>
 
 <style>
