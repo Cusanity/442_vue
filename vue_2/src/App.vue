@@ -9,8 +9,10 @@
           <NavBar/>
         </el-header>
         <el-main>
-          <HelloWorld msg="NohTyp"/>
-          <SchoolCompo/>
+          <router-link to="/login"></router-link>
+          <!-- <HelloWorld></HelloWorld>
+          <SchoolCompo></SchoolCompo> -->
+          <router-view></router-view>
         </el-main>
       </el-container>
     </el-container>
@@ -18,16 +20,16 @@
 </template>
 
 <script>
-  import HelloWorld from './components/HelloWorld'
-  import SchoolCompo from './components/SchoolCompo'
+  // import HelloWorld from './components/HelloWorld'
+  // import SchoolCompo from './components/SchoolCompo'
   import NavBar from './components/NavBar'
   import NavMenu from './components/NavMenu'
 
 export default {
     name: 'App',
     components: {
-    HelloWorld,
-    SchoolCompo,
+    // HelloWorld,
+    // SchoolCompo,
     NavBar,
     NavMenu,
 },

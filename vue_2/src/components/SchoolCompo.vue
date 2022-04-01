@@ -54,71 +54,78 @@
     let tasks = session.getJsonTasksArray()
     if(tasks === undefined || tasks.length === 0)
         tasks = [
-  {
-    "name": "dasd",
-    "description": "s",
-    "extra_notes": "sdads",
-    "cardID": null,
-    "email": "wyc935398521@gmail.com",
-    "due_date": "2022-03-08 14:14:00",
-    "taskID": 17
-  },
-  {
-    "name": "aaaaa",
-    "description": "aaaaaaaaaa",
-    "extra_notes": "bbbbbbbbbbbbbbbbbbbbbbbbbb",
-    "cardID": null,
-    "email": "wyc935398521@gmail.com",
-    "due_date": "2022-03-11 10:12:00",
-    "taskID": 3
-  },
-  {
-    "name": "bbb",
-    "description": "sadaaa",
-    "extra_notes": "",
-    "cardID": null,
-    "email": "wyc935398521@gmail.com",
-    "due_date": "2022-03-17 20:16:00",
-    "taskID": 4
-  },
-  {
-    "name": "nnnnnnn",
-    "description": "nnnnnnn",
-    "extra_notes": "",
-    "cardID": null,
-    "email": "wyc935398521@gmail.com",
-    "due_date": "2022-03-24 14:17:00",
-    "taskID": 19
-  },
-  {
-    "name": "dasd",
-    "description": "sdsad",
-    "extra_notes": "sdads",
-    "cardID": null,
-    "email": "wyc935398521@gmail.com",
-    "due_date": "2022-03-26 14:14:00",
-    "taskID": 18
-  },
-  {
-    "name": "sfasfa",
-    "description": "asfsfa",
-    "extra_notes": "",
-    "cardID": null,
-    "email": "wyc935398521@gmail.com",
-    "due_date": "2022-03-28 14:21:00",
-    "taskID": 55
-  }
-]
+                {
+                    "name": "dasd",
+                    "description": "s",
+                    "extra_notes": "sdads",
+                    "cardID": null,
+                    "email": "wyc935398521@gmail.com",
+                    "due_date": "2022-03-08 14:14:00",
+                    "taskID": 17
+                },
+                {
+                    "name": "aaaaa",
+                    "description": "aaaaaaaaaa",
+                    "extra_notes": "bbbbbbbbbbbbbbbbbbbbbbbbbb",
+                    "cardID": null,
+                    "email": "wyc935398521@gmail.com",
+                    "due_date": "2022-03-11 10:12:00",
+                    "taskID": 3
+                },
+                {
+                    "name": "bbb",
+                    "description": "sadaaa",
+                    "extra_notes": "",
+                    "cardID": null,
+                    "email": "wyc935398521@gmail.com",
+                    "due_date": "2022-03-17 20:16:00",
+                    "taskID": 4
+                },
+                {
+                    "name": "bbb",
+                    "description": "sadaaa",
+                    "extra_notes": "",
+                    "cardID": null,
+                    "email": "wyc935398521@gmail.com",
+                    "due_date": "2022-03-17 20:16:00",
+                    "taskID": 4
+                },
+                {
+                    "name": "bbb",
+                    "description": "sadaaa",
+                    "extra_notes": "",
+                    "cardID": null,
+                    "email": "wyc935398521@gmail.com",
+                    "due_date": "2022-03-17 20:16:00",
+                    "taskID": 4
+                },
+                {
+                    "name": "bbb",
+                    "description": "sadaaa",
+                    "extra_notes": "",
+                    "cardID": null,
+                    "email": "wyc935398521@gmail.com",
+                    "due_date": "2022-03-17 20:16:00",
+                    "taskID": 4
+                }
+            ]
     export default({
         name:'SchoolCompo',
         data(){
             return{
                 SchoolName:'aaa',
                 address:'bbb',
-                cards: this.initCards(tasks),
-                tasks: tasks,
                 clicked: Array(5).fill(false),
                 hidden: true
+            }
+        },
+        computed:{
+            tasks(){
+                
+                return session.getJsonTasksArray()
+            },
+            cards(){
+                return this.initCards(tasks)
             }
         },
         methods: {

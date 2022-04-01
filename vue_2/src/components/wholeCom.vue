@@ -64,7 +64,7 @@
 
 <script>
   export default {
-    name:"wholeCom",
+    name:"WholeCom",
     data() {
       const item = {
         date: '2016-05-02',
