@@ -1,21 +1,36 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="NohTyp"/>
-    <SchoolCompo/>
+    <el-container>
+      <el-aside width="auto">
+        <NavMenu/>
+      </el-aside>
+      <el-container>
+        <el-header style="height: 60px; padding:0;">
+          <NavBar/>
+        </el-header>
+        <el-main>
+          <HelloWorld msg="NohTyp"/>
+          <SchoolCompo/>
+        </el-main>
+      </el-container>
+    </el-container>
   </div>
 </template>
 
 <script>
-  import HelloWorld from './components/HelloWorld.vue'
-  import SchoolCompo from './components/SchoolCompo.vue'
-  
-  export default {
+  import HelloWorld from './components/HelloWorld'
+  import SchoolCompo from './components/SchoolCompo'
+  import NavBar from './components/NavBar'
+  import NavMenu from './components/NavMenu'
+
+export default {
     name: 'App',
     components: {
-      HelloWorld,
-      SchoolCompo
-    },
+    HelloWorld,
+    SchoolCompo,
+    NavBar,
+    NavMenu,
+},
     data: () => ({
       loading: false,
       selection: 1,
@@ -38,6 +53,5 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 </style>

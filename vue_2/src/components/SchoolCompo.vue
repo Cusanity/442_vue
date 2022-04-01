@@ -1,7 +1,7 @@
 <template>
     <!--  -->
     <div class="demo" @wheel="scrollCards($event)">
-        <vue-card-stack :cards="cards" :stack-width="1200" :card-width="400" :speed="0.5">
+        <vue-card-stack :cards="cards" :stack-width="1200" :card-width="400" :card-height="300" :speed="0.5">
             <template v-slot:card="{ card }">
                 <div style="width: 100%; height: 100%; padding: 15px;" :style="{ background: card.background}" @click="clicked[card.data] = true" @mouseleave="clicked[card.data] = false">
                     <!-- <el-dropdown>
@@ -16,20 +16,18 @@
                             <el-dropdown-item icon="el-icon-circle-check">Action 5</el-dropdown-item>
                         </el-dropdown-menu>
                     </el-dropdown> -->
-                    {{card.data}}
+                    <!-- {{card.data}} -->
+                    <!-- { "name": "bbb", "description": "sadaaa", "extra_notes": "", "cardID": null, "email": "wyc935398521@gmail.com", "due_date": "2022-03-17 20:16:00", "taskID": 4 } -->
+
                     <el-row style="margin:10px">
                         <el-button type="primary" icon="el-icon-edit" circle></el-button>
                         <el-button type="success" icon="el-icon-check" circle></el-button>
                         <el-button type="danger" icon="el-icon-delete" circle></el-button>
                     </el-row>
                     <el-descriptions direction="horizontal" :column="1" border size="medium">
-                    <el-descriptions-item label="Username">kooriookami</el-descriptions-item>
-                    <el-descriptions-item label="Telephone">18100000000</el-descriptions-item>
-                    <el-descriptions-item label="Place" :span="2">Suzhou</el-descriptions-item>
-                    <el-descriptions-item label="Remarks">
-                        <el-tag>School</el-tag>
-                    </el-descriptions-item>
-                    <el-descriptions-item label="Address">No.1188, Wuzhong Avenue, Wuzhong District, Suzhou, Jiangsu Province</el-descriptions-item>
+                    <el-descriptions-item label="Name">{{card.data.name}}</el-descriptions-item>
+                    <el-descriptions-item label="Extra Notes">{{card.data.extra_notes}}</el-descriptions-item>
+                    <el-descriptions-item label="Due date" :span="2">{{card.data.due_date}}</el-descriptions-item>
                     <el-descriptions-item ></el-descriptions-item>
                     </el-descriptions>
                 </div>
@@ -54,6 +52,63 @@
     import VueCardStack from "vue-card-stack";
     import * as session from '../js/session'
     let tasks = session.getJsonTasksArray()
+    if(tasks === undefined || tasks.length === 0)
+        tasks = [
+  {
+    "name": "dasd",
+    "description": "s",
+    "extra_notes": "sdads",
+    "cardID": null,
+    "email": "wyc935398521@gmail.com",
+    "due_date": "2022-03-08 14:14:00",
+    "taskID": 17
+  },
+  {
+    "name": "aaaaa",
+    "description": "aaaaaaaaaa",
+    "extra_notes": "bbbbbbbbbbbbbbbbbbbbbbbbbb",
+    "cardID": null,
+    "email": "wyc935398521@gmail.com",
+    "due_date": "2022-03-11 10:12:00",
+    "taskID": 3
+  },
+  {
+    "name": "bbb",
+    "description": "sadaaa",
+    "extra_notes": "",
+    "cardID": null,
+    "email": "wyc935398521@gmail.com",
+    "due_date": "2022-03-17 20:16:00",
+    "taskID": 4
+  },
+  {
+    "name": "nnnnnnn",
+    "description": "nnnnnnn",
+    "extra_notes": "",
+    "cardID": null,
+    "email": "wyc935398521@gmail.com",
+    "due_date": "2022-03-24 14:17:00",
+    "taskID": 19
+  },
+  {
+    "name": "dasd",
+    "description": "sdsad",
+    "extra_notes": "sdads",
+    "cardID": null,
+    "email": "wyc935398521@gmail.com",
+    "due_date": "2022-03-26 14:14:00",
+    "taskID": 18
+  },
+  {
+    "name": "sfasfa",
+    "description": "asfsfa",
+    "extra_notes": "",
+    "cardID": null,
+    "email": "wyc935398521@gmail.com",
+    "due_date": "2022-03-28 14:21:00",
+    "taskID": 55
+  }
+]
     export default({
         name:'SchoolCompo',
         data(){

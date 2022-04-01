@@ -4,7 +4,7 @@
     <h3>Essential Links</h3>
     <ul>
       <li><a href="./login.html" target="_blank" rel="noopener">LOGIN</a></li>
-      <li><a href="./login.html" target="_blank" rel="noopener">LOGIN</a></li>
+      <li><a href="./user-home.html" target="_blank" rel="noopener">USER_HOME</a></li>
     </ul>
   </div>
 </template>
