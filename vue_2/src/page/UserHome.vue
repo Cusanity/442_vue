@@ -1,18 +1,18 @@
 <template>
     <div>
         <HelloWorld></HelloWorld>
-        <SchoolCompo></SchoolCompo>
+        <CardsStack></CardsStack>
     </div>
 </template>
 
 <script>
     import HelloWorld from "../components/HelloWorld"
-    import SchoolCompo from "../components/SchoolCompo"
+    import CardsStack from "../components/CardsStack"
 
     export default({
         components:{
             HelloWorld,
-            SchoolCompo
+            CardsStack
         }
     })    
 </script>

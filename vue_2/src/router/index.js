@@ -1,7 +1,7 @@
 import VueRouter from "vue-router";
 import WholeCom from '../components/WholeCom'
 import UserHome from '../page/UserHome'
-import LoginPage from '../page/LoginPage'
+import SignupPage from '../page/SignupPage'
 
 export default new VueRouter({
     routes: [
@@ -12,8 +12,8 @@ export default new VueRouter({
             path: '/',
             component: UserHome
         },{
-            path: '/loginPage',
-            component: LoginPage
+            path: '/signup',
+            component: SignupPage
         }
     ]
 })

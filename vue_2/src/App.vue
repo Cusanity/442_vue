@@ -11,7 +11,7 @@
         <el-main>
           <router-link to="/login"></router-link>
           <!-- <HelloWorld></HelloWorld>
-          <SchoolCompo></SchoolCompo> -->
+          <CardsStack></CardsStack> -->
           <router-view></router-view>
         </el-main>
       </el-container>
@@ -21,7 +21,7 @@
 
 <script>
   // import HelloWorld from './components/HelloWorld'
-  // import SchoolCompo from './components/SchoolCompo'
+  // import CardsStack from './components/CardsStack'
   import NavBar from './components/NavBar'
   import NavMenu from './components/NavMenu'
 
@@ -29,7 +29,7 @@ export default {
     name: 'App',
     components: {
     // HelloWorld,
-    // SchoolCompo,
+    // CardsStack,
     NavBar,
     NavMenu,
 },

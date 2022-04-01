@@ -110,7 +110,7 @@
                 }
             ]
     export default({
-        name:'SchoolCompo',
+        name:'CardsStack',
         data(){
             return{
                 SchoolName:'aaa',

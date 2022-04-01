@@ -23,8 +23,8 @@
                 <el-menu-item index="2-4-3">item three</el-menu-item>
                 </el-submenu>
             </el-submenu>
-            <el-menu-item index="loginpage" route="loginpage">
-                Login
+            <el-menu-item index="signup" route="signup">
+                Sign Up
             </el-menu-item>
         </el-menu>
     </div>
