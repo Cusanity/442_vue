@@ -1,18 +1,26 @@
 <template>
     <div>
-        <el-form ref="form" :model="form" label-width="120px" >
-        <el-form-item label="Activity name">
-            <el-input v-model="form.name"></el-input>
-        </el-form-item>
-        <el-form-item label="Activity zone">
-            <el-select v-model="form.region" placeholder="please select your zone">
-            <el-option label="Zone one" value="shanghai"></el-option>
-            <el-option label="Zone two" value="beijing"></el-option>
-            </el-select>
-        </el-form-item>
+        <el-form ref="form" :model="form" label-width="120px">
+        <el-row>
+            <el-col :offset="5" :span="8">
+                <el-form-item label="Activity name">
+                    <el-input v-model="form.name"></el-input>
+                </el-form-item>
+            </el-col>
+        </el-row>
+        <el-row>
+            <el-col :offset="5" :span="8">
+                <el-form-item label="Activity zone">
+                    <el-select v-model="form.region" placeholder="please select your zone">
+                    <el-option label="Zone one" value="shanghai"></el-option>
+                    <el-option label="Zone two" value="beijing"></el-option>
+                    </el-select>
+                </el-form-item>
+            </el-col>
+        </el-row>
         <el-form-item label="Activity time">
             <el-col :span="1">
-            <el-date-picker type="datetime" placeholder="Pick a date" v-model="form.date1" style="width: 100%;"></el-date-picker>
+                <el-date-picker type="datetime" placeholder="Pick a date" v-model="form.date1" style="width: 100%;"></el-date-picker>
             </el-col>
             <el-col class="line" :span="2">-</el-col>
             <el-col :span="1">
